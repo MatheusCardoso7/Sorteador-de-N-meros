@@ -30,6 +30,8 @@ thirdInput.oninput = () => {
 roll.onclick = (event) => {
   event.preventDefault()
 
+  resultNumbers.innerHTML = ""
+
   const quantity = Number(firstInput.value)
   const min = Number(secondInput.value)
   const max = Number(thirdInput.value)
@@ -62,6 +64,11 @@ roll.onclick = (event) => {
 
       return
     }
+  }
+
+  if (min > max) {
+    alert("O valor mínimo não pode ser maior que o máximo")
+    return
   }
 
   for (let i = 0; i < quantity; i++) {
