@@ -1,0 +1,78 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --content-primary: #ffffff;
+  --content-secondary: #c7c9cc;
+  --content-tertiary: #d9d9d9;
+  --content-brand: #c58de7;
+  --color-inverse: #030203;
+
+  --background-primary: #020202;
+  --background-secondary: #111012;
+  --background-tertiary: #24222e;
+  --background-brand: #c58de7;
+  --background-gray: #3d3d3d;
+
+  --accent-pink: #d586e0;
+  --accent-blue: #91a1fa;
+  --accent-green: #77c0af;
+  --accent-lime: #d1dc97;
+  --accent-red: #e9a9b3;
+
+  --gradient-border: linear-gradient(
+    90deg,
+    #77c0af 0%,
+    #d1dc97 14.84%,
+    #e9a9b3 32.15%,
+    #d586e0 65.79%,
+    #91a1fa 84.58%
+  );
+  --gradient-background: linear-gradient(90deg, #d586e0 0%, #91a1fa 98.93%);
+  --gradient-content: linear-gradient(90deg, #c7c9cc 0%, #3d3d3d 100%);
+
+  --display-family: "Sora", sans-serif;
+  --display-large: 800 4.5rem/130% var(--display-family);
+  --display-medium: 800 2.5rem/130% var(--display-family);
+  --display-small: 700 2rem/130% var(--display-family);
+  --display-logo: 800 1.5rem/130% var(--display-family);
+
+  --overline: 700 1rem/150% "Roboto Mono", sans-serif;
+  --results: 700 4rem/150% "Roboto Mono", sans-serif;
+  --long-results: 700 3rem/150% "Roboto Mono", sans-serif;
+
+  --text-family: "Roboto Flex", sans-serif;
+  --paragraph-large: 500 1rem/150% var(--text-family);
+  --paragraph-medium: 500 0.875rem/150% var(--text-family);
+  --paragraph-small: 500 0.75rem/150% var(--text-family);
+  --label-medium: 700 1.25rem/150% var(--text-family);
+  --label-small: 700 1rem/150% var(--text-family);
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-image:
+    url(/assets/background.svg),
+    linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.96) 100%);
+  align-content: center;
+  justify-items: center;
+}
+
+.logo {
+  display: flex;
+  width: 100%;
+  max-width: 68.75rem;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 5.5rem;
+  & h1 {
+    font: var(--display-logo);
+    color: var(--content-primary);
+  }
+}

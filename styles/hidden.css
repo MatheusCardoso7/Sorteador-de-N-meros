@@ -1,0 +1,166 @@
+.hidden {
+  display: none;
+}
+
+#results {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  & h2 {
+    margin-top: 0.25rem;
+    margin-bottom: 5.5rem;
+  }
+}
+
+#result-numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+
+  & h1 {
+    font: var(--results);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 7.2rem;
+
+    & span {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      animation: fontColor 4s 150ms linear forwards;
+      opacity: 0;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 6.25rem;
+      height: 6.25rem;
+      border-radius: 28px;
+      background: transparent;
+      z-index: -1;
+      animation: resultAppear 4s linear forwards;
+    }
+  }
+  .long {
+    font: var(--long-results);
+  }
+}
+
+.reroll-button {
+  opacity: 0;
+}
+
+.opacity {
+  opacity: 1;
+  animation: rerollAppear 4s linear forwards;
+}
+
+@keyframes resultAppear {
+  0% {
+    background: var(--content-brand);
+    rotate: 0deg;
+    scale: 0%;
+  }
+
+  2% {
+    scale: 0%;
+  }
+
+  10% {
+    scale: 125%;
+  }
+
+  14% {
+    scale: 100%;
+  }
+
+  20% {
+    background: var(--content-brand);
+    rotate: 0deg;
+  }
+
+  28% {
+    rotate: 90deg;
+  }
+
+  36% {
+    rotate: 180deg;
+  }
+
+  90% {
+    scale: 100%;
+  }
+
+  95% {
+    opacity: 1;
+  }
+
+  100% {
+    rotate: 180deg;
+    scale: 70%;
+    opacity: 0;
+    background: var(--content-brand);
+  }
+}
+
+@keyframes fontColor {
+  0% {
+    color: black;
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  35% {
+    opacity: 1;
+  }
+
+  64% {
+    color: black;
+    scale: 100%;
+  }
+
+  85% {
+    color: black;
+    scale: 100%;
+  }
+
+  95% {
+    scale: 80%;
+    color: var(--content-brand);
+  }
+
+  100% {
+    scale: 80%;
+    color: var(--content-brand);
+    opacity: 1;
+  }
+}
+
+@keyframes rerollAppear {
+  0% {
+    opacity: 0;
+  }
+
+  80% {
+    padding-top: 0rem;
+  }
+
+  90% {
+    opacity: 0;
+    padding-top: 6rem;
+  }
+
+  100% {
+    opacity: 1;
+    padding-top: 6rem;
+  }
+}

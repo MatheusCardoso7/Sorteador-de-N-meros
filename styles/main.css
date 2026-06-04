@@ -1,0 +1,61 @@
+main {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 68.75rem;
+  gap: 6.75rem;
+}
+
+hero {
+  max-width: 31.75rem;
+  width: 100%;
+}
+
+.title {
+  & h2 {
+    font: var(--overline);
+    background: linear-gradient(
+      90deg,
+      rgba(199, 201, 204, 1) 0%,
+      rgba(61, 61, 61, 0.6) 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.75rem;
+  }
+  & h1 {
+    font: var(--display-large);
+    color: var(--content-primary);
+    text-transform: uppercase;
+    letter-spacing: -4%;
+  }
+}
+
+.tutorial {
+  max-width: 24.125rem;
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 2.375rem;
+  & span {
+    font: var(--paragraph-medium);
+    color: var(--content-brand);
+  }
+  & p {
+    font: var(--paragraph-small);
+    color: var(--content-secondary);
+  }
+}
+
+.chat-icon path {
+  stroke: var(--content-brand);
+}
+
+a {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}

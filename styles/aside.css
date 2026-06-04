@@ -1,0 +1,131 @@
+aside {
+  width: 100%;
+  max-width: 30.125rem;
+  & header {
+    & h1 {
+      font: var(--label-medium);
+      color: var(--content-primary);
+      text-transform: uppercase;
+    }
+    & p {
+      font: var(--paragraph-large);
+      color: var(--content-secondary);
+      text-transform: lowercase;
+      margin-bottom: 2.5rem;
+    }
+  }
+  & h2 {
+    font: var(--label-small);
+    color: var(--content-secondary);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  & .numbers {
+    display: flex;
+    gap: 0.75rem;
+    & #first-number,
+    & #second-number,
+    & #third-number {
+      width: 88px;
+      text-align: center;
+    }
+  }
+  & .input {
+    appearance: none;
+    font: var(--display-small);
+    color: var(--content-primary);
+    background: var(--background-secondary);
+    border-radius: 8px;
+    width: 86px;
+    height: 56px;
+    padding: 0.25rem 0.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    border: 2px solid transparent;
+    &::placeholder {
+      font: var(--display-small);
+      color: var(--content-primary);
+    }
+    &:hover, &:focus {
+      background:
+        linear-gradient(var(--background-tertiary)) padding-box,
+        var(--gradient-border) border-box;
+
+      background-size:
+        100% 100%,
+        300% 300%;
+
+      animation: borderMove 4s linear infinite;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  & .checkbox {
+    margin-bottom: 2.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    & span {
+      font:
+        400 0.75rem/150% "Inter",
+        sans-serif;
+      color: var(--content-primary);
+    }
+  }
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 30.125rem;
+    padding-block: 1rem;
+    font: var(--label-medium);
+    color: var(--content-primary);
+    text-transform: uppercase;
+    appearance: none;
+    border: none;
+    background: var(--background-tertiary);
+    border-radius: 8px;
+    border: 2px solid transparent;
+    &:hover {
+      background:
+        linear-gradient(var(--background-secondary)) padding-box,
+        var(--gradient-border) border-box;
+
+      background-size:
+        100% 100%,
+        300% 300%;
+
+      animation: borderMove 4s linear infinite;
+      & .arrow {
+        animation: arrowMove 1.4s linear infinite;
+      }
+    }
+  }
+}
+
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+@keyframes arrowMove {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(12px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
